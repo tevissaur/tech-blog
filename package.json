@@ -1,4 +1,13 @@
 {
+  "name": "14-mvc-hw",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
@@ -9,5 +18,15 @@
     "handlebars": "^4.7.7",
     "mysql2": "^2.3.2",
     "sequelize": "^6.9.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tevissaur/tech-blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tevissaur/tech-blog/issues"
+  },
+  "homepage": "https://github.com/tevissaur/tech-blog#readme",
+  "description": ""
 }
