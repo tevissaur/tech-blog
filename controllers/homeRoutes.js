@@ -14,6 +14,9 @@ router.get('/', async (req, res) => {
             posts,
             logged_in: req.session.logged_in
         })
+
+        console.log(req.session.logged_in)
+
     }
     catch (err) {
         res.status(500).json(err)
@@ -43,11 +46,12 @@ router.get('/profile', withAuth, async (req, res) => {
             include: [{ model: Post }],
             attributes: { exclude: ['password'] },
         });
+        console.log(req.session)
 
         const user = userData.get({ plain: true });
         res.render('profile', {
             ...user,
-            logged_in: true
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
